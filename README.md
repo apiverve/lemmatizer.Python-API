@@ -1,4 +1,4 @@
-Text Lemmatization API
+Text Lemmatizer API
 ============
 
 Lemmatizer is a simple tool for lemmatizing text. It returns the lemmatized text.
@@ -7,12 +7,12 @@ Lemmatizer is a simple tool for lemmatizing text. It returns the lemmatized text
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Text Lemmatization API](https://apiverve.com/marketplace/api/lemmatizer)
+This is a Python API Wrapper for the [Text Lemmatizer API](https://apiverve.com/marketplace/api/lemmatizer)
 
 ---
 
 ## Installation
-	pip install apiverve-textlemmatization
+	pip install apiverve-textlemmatizer
 
 ---
 
@@ -25,14 +25,14 @@ You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ## Usage
 
-The Text Lemmatization API documentation is found here: [https://docs.apiverve.com/api/lemmatizer](https://docs.apiverve.com/api/lemmatizer).  
+The Text Lemmatizer API documentation is found here: [https://docs.apiverve.com/api/lemmatizer](https://docs.apiverve.com/api/lemmatizer).  
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ```
 # Import the client module
-from apiverve_textlemmatization.apiClient import LemmatizerAPIClient
+from apiverve_textlemmatizer.apiClient import LemmatizerAPIClient
 
 # Initialize the client with your APIVerve API key
 api = LemmatizerAPIClient("[YOUR_API_KEY]")
@@ -47,7 +47,7 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-query = {  "text": "The quick brown foxes jumped over the lazy dogs and other foxes"}
+query = {  "text": "The cats ran from door to door" }
 ```
 
 ###### Simple Request
@@ -67,17 +67,11 @@ print(result)
   "status": "ok",
   "error": null,
   "data": {
-    "found": 9,
+    "found": 3,
     "lemmas": {
-      "quick": 1,
-      "brown": 1,
-      "fox": 2,
-      "jump": 1,
-      "over": 1,
-      "lazi": 1,
-      "dog": 1,
-      "and": 1,
-      "other": 1
+      "cat": 1,
+      "ran": 1,
+      "door": 2
     }
   }
 }
